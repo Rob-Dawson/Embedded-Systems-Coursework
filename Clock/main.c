@@ -18,7 +18,7 @@ __CONFIG(FOSC_HS & WDTE_OFF & PWRTE_ON & BOREN_OFF & LVP_OFF);
 unsigned char time_rx @ 0x30;        //define receive reg.
 static volatile bit time_rx7 @ (unsigned)&time_rx*8+7;   //receive reg highest.
 
-const char table[]={0x50,0x59,0x23,0x8,0x3,0x06,0x06,0x00};
+const char table[]={0x50,0x59,0x23,0x8,0x3,0x06,0x06,0x00}; //These are the preset clock values, the time showing is 50:59:23 followed by the date
 
 char table1[7];      
 char value = 0;
@@ -68,26 +68,25 @@ void writeTime(unsigned char timeClock)
         {
             IO = 1; //If any of the bits are one, IO = 1
         }
-        timeClock = timeClock>> 1; //Bit Shift Right 
+        timeClock = timeClock >> 1; //Bit Shift Right 
         SCLK = 1;
     }
     SCLK = 0;
 }
 
 unsigned char readTime()
-{
-   int j;                            //set the loop counter.  
-   TRISB4=1;                         //continue to write 8bit 
-   for(j=0;j<8;j++)                  
-      {
-        SCLK=0;                       //pull low clk                   
-        time_rx=time_rx>>1;           //judge the send bit is 0 or 1.  
-        time_rx7=IO;                //put the received bit into the reg's highest.
-       SCLK=1;                       //pull high clk                 
-      }                                                              
-    TRISB4=0;                        //finished 1 byte,pull low clk  
-    SCLK=0;                          
-    return(time_rx);    
+{                           
+    TRISB4 = 1;                         //continue to write 8bit 
+    for(int j = 0; j < 8; ++j)                  
+    {
+        SCLK = 0;                                     
+        time_rx=time_rx >> 1;         
+        time_rx7 = IO;                //put the received bit into the reg's highest.
+        SCLK = 1;                                     
+    }                                                           
+    TRISB4 = 0;                         
+    SCLK = 0;                          
+    return (time_rx);    
 }
 
 void setTime()
@@ -164,11 +163,11 @@ void display()
     char units = (value & 0x0f);
     
     char value1 = table1[1];
-    char minutesTens = (value1 >> 4)&0x07;
+    char minutesTens = (value1 >> 4)&0x07; 
     char minutesUnits = (value1 & 0x0f);
     
     char value2 = table1[2];
-    char hoursTens = (value2 >> 4)&0x07;
+    char hoursTens = (value2 >> 4)&0x07; 
     char hoursUnits = (value2 & 0x0f);
     
     NOP();
@@ -189,7 +188,7 @@ void main()
     setTime();
     while(1)
     {
-        writeCmd(0x01);
+        writeCmd(0x01); //Clear LCD 
         getTime();
         display();
     }
