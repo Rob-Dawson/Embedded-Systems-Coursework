@@ -1,0 +1,470 @@
+[p LITE_MODE AUTOSTATIC PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F877A ]
+[d frameptr 6 ]
+"7 C:\Users\Zayd\MPLABXProjects\ACW.X\buttons.c
+[v _buttonsetup buttonsetup `(v  1 e 1 0 ]
+"29
+[v _checkButtons checkButtons `(uc  1 e 1 0 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\pic\eeprom.c
+[v _eecpymem eecpymem `(v  1 e 1 0 ]
+"39
+[v _memcpyee memcpyee `(v  1 e 1 0 ]
+"4 C:\Users\Zayd\MPLABXProjects\ACW.X\LCD.c
+[v _LCDsetup LCDsetup `(v  1 e 1 0 ]
+"14
+[v _LCDdelay LCDdelay `(v  1 e 1 0 ]
+"18
+[v _LCDdelay2 LCDdelay2 `(v  1 e 1 0 ]
+"27
+[v _writeChar writeChar `(v  1 e 1 0 ]
+"42
+[v _writeMessage writeMessage `(v  1 e 1 0 ]
+"49
+[v _writeMessageline1 writeMessageline1 `(v  1 e 1 0 ]
+"54
+[v _writeMessageline2 writeMessageline2 `(v  1 e 1 0 ]
+"67
+[v _writeCmd writeCmd `(v  1 e 1 0 ]
+"83
+[v _resetCursor resetCursor `(v  1 e 1 0 ]
+"86
+[v _displayOn displayOn `(v  1 e 1 0 ]
+"90
+[v _clearDisplay clearDisplay `(v  1 e 1 0 ]
+"94
+[v _turnon2linemode turnon2linemode `(v  1 e 1 0 ]
+"38 C:\Users\Zayd\MPLABXProjects\ACW.X\main.c
+[v _zone0OK zone0OK `(v  1 e 1 0 ]
+"46
+[v _zone1OK zone1OK `(v  1 e 1 0 ]
+"54
+[v _zone2OK zone2OK `(v  1 e 1 0 ]
+"62
+[v _zone3OK zone3OK `(v  1 e 1 0 ]
+"70
+[v _zone0Alert zone0Alert `(v  1 e 1 0 ]
+"78
+[v _zone1Alert zone1Alert `(v  1 e 1 0 ]
+"86
+[v _zone2Alert zone2Alert `(v  1 e 1 0 ]
+"94
+[v _zone3Alert zone3Alert `(v  1 e 1 0 ]
+"102
+[v _currentTemp currentTemp `(v  1 e 1 0 ]
+"114
+[v _alarmOn alarmOn `(v  1 e 1 0 ]
+"122
+[v _alarmOff alarmOff `(v  1 e 1 0 ]
+"130
+[v _zone0Activate zone0Activate `(v  1 e 1 0 ]
+"138
+[v _zone1Activate zone1Activate `(v  1 e 1 0 ]
+"146
+[v _zone2Activate zone2Activate `(v  1 e 1 0 ]
+"154
+[v _zone3Activate zone3Activate `(v  1 e 1 0 ]
+"162
+[v _zone0Deactivate zone0Deactivate `(v  1 e 1 0 ]
+"170
+[v _zone1Deactivate zone1Deactivate `(v  1 e 1 0 ]
+"178
+[v _zone2Deactivate zone2Deactivate `(v  1 e 1 0 ]
+"186
+[v _zone3Deactivate zone3Deactivate `(v  1 e 1 0 ]
+"205
+[v _ButtonGrid ButtonGrid `(v  1 e 1 0 ]
+"242
+[v _modeSelect modeSelect `(v  1 e 1 0 ]
+"249
+[v _checkMessage checkMessage `(v  1 e 1 0 ]
+"271
+[v _alarmOnOff alarmOnOff `(v  1 e 1 0 ]
+"307
+[v _checkZoneMessage checkZoneMessage `(v  1 e 1 0 ]
+"315
+[v _checkZones checkZones `(v  1 e 1 0 ]
+"359
+[v _activateZones activateZones `(v  1 e 1 0 ]
+"477
+[v _main main `(v  1 e 1 0 ]
+"16 C:\Users\Zayd\MPLABXProjects\ACW.X\buttons.h
+[v _col col `i  1 e 2 0 ]
+"17
+[v _row row `i  1 e 2 0 ]
+"164 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic16f877a.h
+[v _PORTA PORTA `VEuc  1 e 1 @5 ]
+"276
+[v _PORTC PORTC `VEuc  1 e 1 @7 ]
+"338
+[v _PORTD PORTD `VEuc  1 e 1 @8 ]
+"1323
+[v _TRISA TRISA `VEuc  1 e 1 @133 ]
+"1435
+[v _TRISC TRISC `VEuc  1 e 1 @135 ]
+"1497
+[v _TRISD TRISD `VEuc  1 e 1 @136 ]
+"2227
+[v _ADCON1 ADCON1 `VEuc  1 e 1 @159 ]
+"2561
+[v _RA1 RA1 `VEb  1 e 0 @41 ]
+"2563
+[v _RA2 RA2 `VEb  1 e 0 @42 ]
+"2565
+[v _RA3 RA3 `VEb  1 e 0 @43 ]
+"2591
+[v _RC0 RC0 `VEb  1 e 0 @56 ]
+"2593
+[v _RC1 RC1 `VEb  1 e 0 @57 ]
+"2595
+[v _RC2 RC2 `VEb  1 e 0 @58 ]
+"2597
+[v _RC3 RC3 `VEb  1 e 0 @59 ]
+"2599
+[v _RC4 RC4 `VEb  1 e 0 @60 ]
+"2601
+[v _RC5 RC5 `VEb  1 e 0 @61 ]
+"2603
+[v _RC6 RC6 `VEb  1 e 0 @62 ]
+"2605
+[v _RC7 RC7 `VEb  1 e 0 @63 ]
+"16 C:\Users\Zayd\MPLABXProjects\ACW.X\main.c
+[v _alarmOnOrOff alarmOnOrOff `i  1 e 2 0 ]
+"17
+[v _zoneActMode zoneActMode `i  1 e 2 0 ]
+"18
+[v _zoneCheck zoneCheck `i  1 e 2 0 ]
+"19
+[v _zone0On zone0On `i  1 e 2 0 ]
+"20
+[v _zone1On zone1On `i  1 e 2 0 ]
+"21
+[v _zone2On zone2On `i  1 e 2 0 ]
+"22
+[v _zone3On zone3On `i  1 e 2 0 ]
+"23
+[v _zone0Alerted zone0Alerted `i  1 e 2 0 ]
+"24
+[v _zone1Alerted zone1Alerted `i  1 e 2 0 ]
+"25
+[v _zone2Alerted zone2Alerted `i  1 e 2 0 ]
+"26
+[v _zone3Alerted zone3Alerted `i  1 e 2 0 ]
+"27
+[v _tempChange tempChange `i  1 e 2 0 ]
+"28
+[v _durationChange durationChange `i  1 e 2 0 ]
+"29
+[v _alertChange alertChange `i  1 e 2 0 ]
+"32
+[v _tempValue tempValue `i  1 e 2 0 ]
+"33
+[v _durationValue durationValue `i  1 e 2 0 ]
+"34
+[v _alertValue alertValue `i  1 e 2 0 ]
+"477
+[v _main main `(v  1 e 1 0 ]
+{
+"488
+} 0
+"315
+[v _checkZones checkZones `(v  1 e 1 0 ]
+{
+"357
+} 0
+"62
+[v _zone3OK zone3OK `(v  1 e 1 0 ]
+{
+"65
+[v zone3OK@message message `[10]uc  1 a 10 0 ]
+"64
+[v zone3OK@F1151 F1151 `[10]uc  1 s 10 F1151 ]
+"69
+} 0
+"94
+[v _zone3Alert zone3Alert `(v  1 e 1 0 ]
+{
+"97
+[v zone3Alert@message message `[13]uc  1 a 13 0 ]
+"96
+[v zone3Alert@F1163 F1163 `[13]uc  1 s 13 F1163 ]
+"101
+} 0
+"54
+[v _zone2OK zone2OK `(v  1 e 1 0 ]
+{
+"57
+[v zone2OK@message message `[10]uc  1 a 10 0 ]
+"56
+[v zone2OK@F1148 F1148 `[10]uc  1 s 10 F1148 ]
+"61
+} 0
+"86
+[v _zone2Alert zone2Alert `(v  1 e 1 0 ]
+{
+"89
+[v zone2Alert@message message `[13]uc  1 a 13 0 ]
+"88
+[v zone2Alert@F1160 F1160 `[13]uc  1 s 13 F1160 ]
+"93
+} 0
+"46
+[v _zone1OK zone1OK `(v  1 e 1 0 ]
+{
+"49
+[v zone1OK@message message `[10]uc  1 a 10 0 ]
+"48
+[v zone1OK@F1145 F1145 `[10]uc  1 s 10 F1145 ]
+"53
+} 0
+"78
+[v _zone1Alert zone1Alert `(v  1 e 1 0 ]
+{
+"81
+[v zone1Alert@message message `[13]uc  1 a 13 0 ]
+"80
+[v zone1Alert@F1157 F1157 `[13]uc  1 s 13 F1157 ]
+"85
+} 0
+"38
+[v _zone0OK zone0OK `(v  1 e 1 0 ]
+{
+"41
+[v zone0OK@message message `[10]uc  1 a 10 0 ]
+"40
+[v zone0OK@F1142 F1142 `[10]uc  1 s 10 F1142 ]
+"45
+} 0
+"70
+[v _zone0Alert zone0Alert `(v  1 e 1 0 ]
+{
+"73
+[v zone0Alert@message message `[13]uc  1 a 13 0 ]
+"72
+[v zone0Alert@F1154 F1154 `[13]uc  1 s 13 F1154 ]
+"77
+} 0
+"307
+[v _checkZoneMessage checkZoneMessage `(v  1 e 1 0 ]
+{
+"310
+[v checkZoneMessage@messagerow messagerow `[13]uc  1 a 13 0 ]
+"309
+[v checkZoneMessage@F1219 F1219 `[13]uc  1 s 13 F1219 ]
+"312
+} 0
+"29 C:\Users\Zayd\MPLABXProjects\ACW.X\buttons.c
+[v _checkButtons checkButtons `(uc  1 e 1 0 ]
+{
+"31
+[v checkButtons@rval rval `uc  1 a 1 0 ]
+"118
+} 0
+"7
+[v _buttonsetup buttonsetup `(v  1 e 1 0 ]
+{
+"15
+} 0
+"271 C:\Users\Zayd\MPLABXProjects\ACW.X\main.c
+[v _alarmOnOff alarmOnOff `(v  1 e 1 0 ]
+{
+"286
+} 0
+"242
+[v _modeSelect modeSelect `(v  1 e 1 0 ]
+{
+"245
+[v modeSelect@messagecol messagecol `[12]uc  1 a 12 0 ]
+"244
+[v modeSelect@messagerow messagerow `[9]uc  1 a 9 12 ]
+"243
+[v modeSelect@F1206 F1206 `[9]uc  1 s 9 F1206 ]
+"244
+[v modeSelect@F1208 F1208 `[12]uc  1 s 12 F1208 ]
+"248
+} 0
+"54 C:\Users\Zayd\MPLABXProjects\ACW.X\LCD.c
+[v _writeMessageline2 writeMessageline2 `(v  1 e 1 0 ]
+{
+[v writeMessageline2@message message `*.4uc  1 a 1 wreg ]
+[v writeMessageline2@message message `*.4uc  1 a 1 wreg ]
+"62
+[v writeMessageline2@message message `*.4uc  1 a 1 7 ]
+"65
+} 0
+"49
+[v _writeMessageline1 writeMessageline1 `(v  1 e 1 0 ]
+{
+[v writeMessageline1@message message `*.4uc  1 a 1 wreg ]
+[v writeMessageline1@message message `*.4uc  1 a 1 wreg ]
+"51
+[v writeMessageline1@message message `*.4uc  1 a 1 7 ]
+"52
+} 0
+"114 C:\Users\Zayd\MPLABXProjects\ACW.X\main.c
+[v _alarmOn alarmOn `(v  1 e 1 0 ]
+{
+"117
+[v alarmOn@message message `[9]uc  1 a 9 0 ]
+"116
+[v alarmOn@F1171 F1171 `[9]uc  1 s 9 F1171 ]
+"121
+} 0
+"122
+[v _alarmOff alarmOff `(v  1 e 1 0 ]
+{
+"125
+[v alarmOff@message message `[10]uc  1 a 10 0 ]
+"124
+[v alarmOff@F1174 F1174 `[10]uc  1 s 10 F1174 ]
+"129
+} 0
+"359
+[v _activateZones activateZones `(v  1 e 1 0 ]
+{
+"406
+} 0
+"186
+[v _zone3Deactivate zone3Deactivate `(v  1 e 1 0 ]
+{
+"189
+[v zone3Deactivate@message message `[11]uc  1 a 11 0 ]
+"188
+[v zone3Deactivate@F1198 F1198 `[11]uc  1 s 11 F1198 ]
+"194
+} 0
+"154
+[v _zone3Activate zone3Activate `(v  1 e 1 0 ]
+{
+"157
+[v zone3Activate@message message `[10]uc  1 a 10 0 ]
+"156
+[v zone3Activate@F1186 F1186 `[10]uc  1 s 10 F1186 ]
+"161
+} 0
+"178
+[v _zone2Deactivate zone2Deactivate `(v  1 e 1 0 ]
+{
+"181
+[v zone2Deactivate@message message `[11]uc  1 a 11 0 ]
+"180
+[v zone2Deactivate@F1195 F1195 `[11]uc  1 s 11 F1195 ]
+"185
+} 0
+"146
+[v _zone2Activate zone2Activate `(v  1 e 1 0 ]
+{
+"149
+[v zone2Activate@message message `[10]uc  1 a 10 0 ]
+"148
+[v zone2Activate@F1183 F1183 `[10]uc  1 s 10 F1183 ]
+"153
+} 0
+"170
+[v _zone1Deactivate zone1Deactivate `(v  1 e 1 0 ]
+{
+"173
+[v zone1Deactivate@message message `[11]uc  1 a 11 0 ]
+"172
+[v zone1Deactivate@F1192 F1192 `[11]uc  1 s 11 F1192 ]
+"177
+} 0
+"138
+[v _zone1Activate zone1Activate `(v  1 e 1 0 ]
+{
+"141
+[v zone1Activate@message message `[10]uc  1 a 10 0 ]
+"140
+[v zone1Activate@F1180 F1180 `[10]uc  1 s 10 F1180 ]
+"145
+} 0
+"162
+[v _zone0Deactivate zone0Deactivate `(v  1 e 1 0 ]
+{
+"165
+[v zone0Deactivate@message message `[12]uc  1 a 12 0 ]
+"164
+[v zone0Deactivate@F1189 F1189 `[12]uc  1 s 12 F1189 ]
+"169
+} 0
+"130
+[v _zone0Activate zone0Activate `(v  1 e 1 0 ]
+{
+"133
+[v zone0Activate@message message `[10]uc  1 a 10 0 ]
+"132
+[v zone0Activate@F1177 F1177 `[10]uc  1 s 10 F1177 ]
+"137
+} 0
+"42 C:\Users\Zayd\MPLABXProjects\ACW.X\LCD.c
+[v _writeMessage writeMessage `(v  1 e 1 0 ]
+{
+[v writeMessage@message message `*.4uc  1 a 1 wreg ]
+"43
+[v writeMessage@i i `i  1 a 2 4 ]
+"42
+[v writeMessage@message message `*.4uc  1 a 1 wreg ]
+[v writeMessage@message message `*.4uc  1 a 1 6 ]
+"47
+} 0
+"27
+[v _writeChar writeChar `(v  1 e 1 0 ]
+{
+[v writeChar@var var `uc  1 a 1 wreg ]
+[v writeChar@var var `uc  1 a 1 wreg ]
+[v writeChar@var var `uc  1 a 1 2 ]
+"40
+} 0
+"83
+[v _resetCursor resetCursor `(v  1 e 1 0 ]
+{
+"85
+} 0
+"90
+[v _clearDisplay clearDisplay `(v  1 e 1 0 ]
+{
+"92
+} 0
+"18
+[v _LCDdelay2 LCDdelay2 `(v  1 e 1 0 ]
+{
+"19
+[v LCDdelay2@i i `ui  1 a 2 0 ]
+"20
+} 0
+"4
+[v _LCDsetup LCDsetup `(v  1 e 1 0 ]
+{
+"12
+} 0
+"94
+[v _turnon2linemode turnon2linemode `(v  1 e 1 0 ]
+{
+"96
+} 0
+"86
+[v _displayOn displayOn `(v  1 e 1 0 ]
+{
+"88
+} 0
+"67
+[v _writeCmd writeCmd `(v  1 e 1 0 ]
+{
+[v writeCmd@cmd cmd `uc  1 a 1 wreg ]
+[v writeCmd@cmd cmd `uc  1 a 1 wreg ]
+"70
+[v writeCmd@cmd cmd `uc  1 a 1 2 ]
+"79
+} 0
+"14
+[v _LCDdelay LCDdelay `(v  1 e 1 0 ]
+{
+"15
+[v LCDdelay@i i `ui  1 a 2 0 ]
+"16
+} 0
